@@ -9,6 +9,9 @@ Bellman provides a `Circuit` trait which you can use to synthesize the constrain
  `cube.rs` contains a circuit for the statement "I know `x` such that `x^3 + x + 5 == 35`"
  - This is the same example used in [Vitalik’s blog post](https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649) and [christianlundkvist's libsnark tutorial](https://github.com/christianlundkvist/libsnark-tutorial).
  
+`quartic.rs` contains a circuit for the statement "I know `x` such that `x^4 - 10x^3 + 35x^2 - 50x + 24 = 0`".
+- This example is made up from `(x - 1)*(x - 2)*(x - 3)*(x - 4) = 0` and comparing to the previous one, it contains terms with the - sign and terms where `x^k` is multiplied with a number.
+ 
 ### Constructing a circuit  
 
 To construct a circuit, first flatten your program into its constituent steps. 
